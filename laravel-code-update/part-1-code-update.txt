@@ -9,7 +9,8 @@
 4/ ->orderBy('age','desc');
 5/ ->select('id','name');
 6/ $request->has('value') ? $request->value : 'default';
-7/ $articles = $this->get();
+7/ $apiKey  = env('API_KEY');
+8/ $articles = $this->get();
 foreach($articles as $article){
     .......
 }
@@ -24,7 +25,11 @@ foreach($articles as $article){
 4/ ->latest('age');
 5/ ->get(['id','name']);
 6/ $request->get('value','default');
-7/ $articles = $this->get();
+7/ config/api.php
+'key'=> env('API_KEY');
+//use this data
+$apiKey  = config('api.key');
+8/ $articles = $this->get();
 $this->chunk(100,function($articles){
     foreach($articles as $article){
         .......
