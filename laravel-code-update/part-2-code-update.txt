@@ -1,0 +1,66 @@
+
+//////////////////// / // code clear, controller, validation, helper, store ORM
+
+
+
+# =========================  Old code 
+1 / controller code clean
+2/ helper function 
+public function newID()
+{
+    $str_result = '6457656465ADS7G4Gjfghsdfgdfgdfg9SDD96FSD9G7SDAVdsffgadfgdfX5454489754';
+    $id substr(str_shuffle($str_result),0,24);
+}
+
+3 / validation
+    public function Store(Request $request){
+        $validator =  Validator::make($request->all(), [
+            'name' => 'required|unique:products',
+        ]);
+    }
+
+4/ ORM Store
+    Product::insert([
+        'name' => $request->name,
+        'price' => $request->price,
+        'qty' => $request->qty,
+    ]);
+
+
+
+# ==========================  latest code
+1 update code 
+    public function register(RegisterRequest $request)
+    {
+        $data = $request->validated();
+        $this->createUser($data);
+    }
+
+2 / helper function 
+    public function newID()
+    {
+        $id = Str::random(24);
+    }
+
+3 / validation
+    class CreateArticleRequest extends Request 
+    {
+        public function ruls(): array
+        {
+            return [
+                'name'=> 'required',
+            ]
+        }
+    }
+
+4 / model ORM
+<?php
+...
+class Product extends Model
+{
+    ..
+    protected $guarded = ['name','price','qty'];
+}
+
+# In controller
+Product::create($request->validated());
