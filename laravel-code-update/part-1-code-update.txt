@@ -2,7 +2,7 @@
 ////////////////////////////////// request ,query ,big data loop,
 
 
-# =========================  Old code 
+# =========================  good code 
 1 / $request->session()->get('cart');
 2/ $request->input('name');
 3/ ->orderBy('created_at','desc');
@@ -17,7 +17,7 @@ foreach($articles as $article){
 
 
 
-# ==========================  update code
+# ==========================  best code
 1 / session('cart');
 2/ $request->name;
 3/ ->latest();
