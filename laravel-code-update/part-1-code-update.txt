@@ -2,7 +2,7 @@
 ////////////////////////////////// request ,query ,big data loop,
 
 
-# =========================  good code 
+# =========================  normal code 
 1 / $request->session()->get('cart');
 2/ $request->input('name');
 3/ ->orderBy('created_at','desc');
