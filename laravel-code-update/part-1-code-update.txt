@@ -15,6 +15,10 @@ foreach($articles as $article){
     .......
 }
 
+9/ $posts = Post::all();
+foreach($posts as $post){
+    echo $post->comments->coun() . "<br/>";
+}
 
 
 
@@ -36,4 +40,8 @@ $this->chunk(100,function($articles){
     }
 });
 
+9/ $posts = Post::with('comments')->all();
+foreach($posts as $post){
+    echo $post->comments->coun() . "<br/>";
+}
 
