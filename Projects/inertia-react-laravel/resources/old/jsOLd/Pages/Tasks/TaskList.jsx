@@ -1,11 +1,14 @@
 import React,{useState } from 'react';
 import { Inertia } from '@inertiajs/inertia';
-import Pagination from './Pagination';
-import MasterLayout from '../../Componnets/MasterLayout/MasterLayout'
+import Pagination from './Pagination.jsx';
+import MasterLayout from '../../Componnets/MasterLayout/MasterLayout.jsx'
+
 
 const TaskList = ({ tasks }) => {
 
   const [currentPage, setCurrentPage] = useState(1);
+
+
 
   const handlePageChange = page => {
     setCurrentPage(page);
@@ -60,6 +63,7 @@ const TaskList = ({ tasks }) => {
                   </div>
                 </div>
               </div>
+
           </section>
       </MasterLayout>
     </div>

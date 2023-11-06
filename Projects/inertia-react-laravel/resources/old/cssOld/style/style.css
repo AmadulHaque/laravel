@@ -1,0 +1,18 @@
+.test-style{
+    color: red;
+}
+.page-loader {
+	width: 100%;
+	display: block;
+	background: #e1dede;
+	height: 100%;
+	position: absolute;
+	z-index: 1111111;
+}
+.loader {
+	margin: 18% 5% 0% 0%;
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: 86%;
+}
