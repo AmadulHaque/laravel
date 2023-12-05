@@ -20,6 +20,8 @@ admin.init = function () {
     admin.pages.init();
 };
 
+console.log(admin);
+
 /*-------------------------------------------------*/
 /* menu */
 /*-------------------------------------------------*/
@@ -279,8 +281,9 @@ admin.ajax = {
 
         axios(axios_obj)
             .then(function (response) {
+                console.log(response);
                 if (typeof result_function === 'function') {
-                    result_function(response);
+                   result_function(response);
                 } else {
                     admin.ajax.done(response);
                 }
