@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+RewriteCond %{HTTP_REFERER} !^http://softmaxonlineschool.app/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://softmaxonlineschool.app$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.softmaxonlineschool.app/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.softmaxonlineschool.app$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://softmaxonlineschool.app/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://softmaxonlineschool.app$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.softmaxonlineschool.app/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.softmaxonlineschool.app$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
