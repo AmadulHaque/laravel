@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Dashboard\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,19 @@ Route::get('/', function () {
     abort(404);
 });
 
+
+# protecting admin routes
+Route::group(['middleware' => 'auth:admin'], function () {
+
+    //Dashboard
+    Route::group(['namespace' => 'App\Http\Controllers\Dashboard',], function () {
+        Route::controller(DashboardController::class)->group(function () {
+            Route::get('/dashboard','dashboard')->name('dashboard');
+        });
+    });
+
+
+
+
+    
+});

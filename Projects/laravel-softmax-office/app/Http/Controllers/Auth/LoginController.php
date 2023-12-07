@@ -31,7 +31,7 @@ class LoginController extends Controller
         
         $creds = $request->only('email','password'); 
         if(Auth::guard('admin')->attempt($creds) ){
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('dashboard');
         }else{
             return redirect()->route('auth.login')->with(['type'=>'error','message'=>'Incorrect credentials']);
         } 

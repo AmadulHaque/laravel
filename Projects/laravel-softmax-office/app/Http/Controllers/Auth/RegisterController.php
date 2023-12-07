@@ -32,13 +32,9 @@ class RegisterController extends Controller
         $data = $request->only('email','name'); 
         $data['password'] = Hash::make($request->password);
         User::create($data);
-
         return response()->json(['status'=>'200','url'=>route('auth.login')]);
        
     }
 
 
 }
-
-
-// Auth::guard('admin')->attempt($request->only('email', 'password'));
