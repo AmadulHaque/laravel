@@ -11,8 +11,8 @@ class StudentController extends Controller
 
     public function index()
     {
-        $datas = Student::paginate();
-        return view('pages.student.index');
+        $datas = Student::paginate(20);
+        return view('pages.student.index',compact('datas'));
 
     }
     public function create()
@@ -23,6 +23,14 @@ class StudentController extends Controller
     public function show()
     {
 
+    }
+
+
+    public function store(Request $request)
+    {
+        $data = $request->only('firstName','lastName','gender' ,'date_of_birth','roll' ,'blood_group','religion','email','class','section','addmission_id','phone');
+        Student::create($data);
+        return "success";
     }
 
 

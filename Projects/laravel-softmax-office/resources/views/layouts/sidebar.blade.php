@@ -34,10 +34,10 @@
                     </a>
                     <ul>
                       <li>
-                        <a href="{{route('student.index')}}">Student List</a>
+                        <a href="{{route('student.index')}}" data-ajax >Student List</a>
                       </li>
                       <li>
-                        <a href="{{route('student.create')}}">Student Add</a>
+                        <a href="{{route('student.create')}}"  data-ajax >Student Add</a>
                       </li>
                     </ul>
                 </li>
