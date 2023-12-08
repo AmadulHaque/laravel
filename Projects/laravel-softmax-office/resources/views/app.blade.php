@@ -11,11 +11,26 @@
     <link rel="stylesheet" href="{{asset('/')}}assets/plugins/icons/flags/flags.css">
     <link rel="stylesheet" href="{{asset('/')}}assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="{{asset('/')}}assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('/')}}assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{asset('/')}}assets/plugins/datatables/datatables.min.css">
+
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
     <link rel="stylesheet" href="{{asset('/')}}assets/css/style.css">
+
+
+    <script src="{{asset('/')}}assets/js/jquery-3.6.0.min.js"></script>
+    <script src="{{asset('/')}}assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('/')}}assets/js/feather.min.js"></script>
+    <script src="{{asset('/')}}assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="{{asset('/')}}assets/plugins/select2/js/select2.min.js"></script>
+    <script src="{{asset('/')}}assets/plugins/moment/moment.min.js"></script>
+    <script src="{{asset('/')}}assets/js/bootstrap-datetimepicker.min.js"></script>
   </head>
+
+
   <body>
     <div class="main-wrapper">
-    
 
         @include('layouts.header')
         @include('layouts.sidebar')
@@ -28,10 +43,7 @@
             </div>
         </div>
     </div>
-    <script src="{{asset('/')}}assets/js/jquery-3.6.0.min.js"></script>
-    <script src="{{asset('/')}}assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('/')}}assets/js/feather.min.js"></script>
-    <script src="{{asset('/')}}assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="{{asset('/')}}assets/js/script.js"></script>
-  </body>
+    <script class="script" src="{{asset('/')}}assets/js/script.js"></script>
+    <script class="script" src="{{asset('/')}}assets/js/page.js"></script>
+</body>
 </html>

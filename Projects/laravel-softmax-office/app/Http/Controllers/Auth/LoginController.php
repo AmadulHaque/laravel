@@ -12,7 +12,7 @@ class LoginController extends Controller
     //
     public function index()
     {
-        return view('auth.login');    
+        return view('auth.login');
     }
 
 
@@ -28,13 +28,13 @@ class LoginController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->with(['errors'=>$validator->errors()]);
         }
-        
-        $creds = $request->only('email','password'); 
+
+        $creds = $request->only('email','password');
         if(Auth::guard('admin')->attempt($creds) ){
-            return redirect()->route('dashboard');
+            return redirect()->route('admin.dashboard');
         }else{
             return redirect()->route('auth.login')->with(['type'=>'error','message'=>'Incorrect credentials']);
-        } 
+        }
     }
 
 
