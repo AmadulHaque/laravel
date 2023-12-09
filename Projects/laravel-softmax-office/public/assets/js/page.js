@@ -16,8 +16,9 @@ function initAdmin() {
         bindEvents: function() {
             // Bind click events for AJAX navigation
             document.addEventListener('click', function(event) {
-
+            
                 if (event.target.matches('a[href], a[href] *')) {
+                    console.clear();
                     let a = event.target.closest('a');
                     let url = a.getAttribute('href');
 
