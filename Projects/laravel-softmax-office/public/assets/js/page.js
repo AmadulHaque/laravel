@@ -66,14 +66,20 @@ function initAdmin() {
                     }
                 });
 
-                tempElement.querySelectorAll('script').forEach(script => {
-                    const scriptContent = script.textContent;
-                    const newScript = document.createElement('script');
-                    if(scriptContent.length > 0){
-                        newScript.textContent = scriptContent;
-                        document.body.appendChild(newScript);
-                    }
-                });
+                
+                let script = tempElement.querySelector('#script').innerHTML;
+                const newScript = document.createElement('script');
+                newScript.textContent = script;
+                document.body.appendChild(newScript);
+
+                // tempElement.querySelectorAll('script').forEach(script => {
+                //     const scriptContent = script.textContent;
+                //     const newScript = document.createElement('script');
+                //     if(scriptContent.length > 0){
+                //         newScript.textContent = scriptContent;
+                //         document.body.appendChild(newScript);
+                //     }
+                // });
 
 
 

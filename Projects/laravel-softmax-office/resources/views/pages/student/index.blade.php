@@ -124,8 +124,8 @@
       </div>
     </div>
   </div>
-    <script>
-        new DataTable('#datatable');
-    </script>
+  <script>
+      new DataTable('#datatable');
+  </script>
 @endsection
 

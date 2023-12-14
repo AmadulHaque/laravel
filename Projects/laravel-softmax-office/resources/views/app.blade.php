@@ -28,7 +28,8 @@
     <script src="{{asset('/')}}assets/plugins/moment/moment.min.js"></script>
     <script src="{{asset('/')}}assets/js/bootstrap-datetimepicker.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-  </head>
+
+   </head>
 
   <body>
     <div class="main-wrapper">
@@ -46,5 +47,7 @@
     </div>
     <script class="script" src="{{asset('/')}}assets/js/script.js"></script>
     <script class="script" src="{{asset('/')}}assets/js/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js" integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 </html>
