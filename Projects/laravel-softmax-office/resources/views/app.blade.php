@@ -47,7 +47,13 @@
     </div>
     <script class="script" src="{{asset('/')}}assets/js/script.js"></script>
     <script class="script" src="{{asset('/')}}assets/js/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js" integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script class="script"  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js" integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        user = {{Auth::guard('admin')->user()->id}} 
+        socket = io('http://127.0.0.1:3000', {
+            query: { user_id: user },
+            transports: ['websocket'],
+        });
+    </script>
 </body>
 </html>

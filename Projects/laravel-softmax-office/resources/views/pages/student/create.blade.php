@@ -150,7 +150,7 @@
         </div>
     </div>
 
-    <script>
+    <script id="script">
         $(document).ready(function(){
 
             //  students add

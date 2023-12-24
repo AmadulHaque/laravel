@@ -1,5 +1,7 @@
 <?php
 
+use App\Events\NewMessage;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\student\StudentController;
 use App\Http\Controllers\Dashboard\DashboardController;
@@ -16,9 +18,11 @@ use App\Http\Controllers\Dashboard\DashboardController;
 */
 
 Route::get('/', function () {
-    abort(404);
+    // Redis::publish('channel',json_encode(['event'=>'newMsg','data'=>['body' => "hello test"]]));
+    return view('welcome');
+    // abort(404);
 });
-
+ 
 
 # protecting admin routes
 Route::group(['middleware' => 'auth:admin'], function () {

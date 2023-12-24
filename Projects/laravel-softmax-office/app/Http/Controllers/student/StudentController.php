@@ -5,14 +5,15 @@ namespace App\Http\Controllers\student;
 use App\Http\Controllers\Controller;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use App\DataTables\StudentDataTable;
 
 class StudentController extends Controller
 {
 
-    public function index()
+    public function index(StudentDataTable $dataTable)
     {
-        $datas = Student::paginate(20);
-        return view('pages.student.index',compact('datas'));
+        return $dataTable->render('pages.student.index');
+        // return view('pages.student.index',compact('datas'));
 
     }
     public function create()

@@ -451,5 +451,5 @@ opacity: 0.45;
     </div>
 </div>
 </div>
-
+ 
 @endsection

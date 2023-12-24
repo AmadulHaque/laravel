@@ -119,8 +119,22 @@
   <script id="script">
     new DataTable('#datatable');
     $(document).ready(function(){
-      let user = {{Auth::guard('admin')->user()->id}} 
-      
+      user = {{Auth::guard('admin')->user()->id}} 
+    
+      socket = io('http://127.0.0.1:3000', {
+          query: { user_id: user },
+          transports: ['websocket'],
+      });
+
+      socket.on("user_connected",(data)=>{
+        $('#status'+data).removeClass('is_online_0');
+        $('#status'+data).addClass('is_online_1');
+      })
+
+      socket.on("user_disconnected",(data)=>{
+        $('#status'+data).removeClass('is_online_1');
+        $('#status'+data).addClass('is_online_0');
+      })
 
     })
 

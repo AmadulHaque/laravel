@@ -63,69 +63,16 @@
             </div>
           </div>
           <div class="table-responsive">
-            <table id="datatable" class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
-              <thead class="student-thread">
-                <tr>
-                  <th>
-                    <div class="form-check check-tables">
-                      <input class="form-check-input" type="checkbox" value="something">
-                    </div>
-                  </th>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Class</th>
-                  <th>DOB</th>
-                  <th>Parent Name</th>
-                  <th>Mobile Number</th>
-                  <th>Address</th>
-                  <th class="text-end">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                @foreach ($datas as $item)
-                <tr>
-                  <td>
-                    <div class="form-check check-tables">
-                      <input class="form-check-input" type="checkbox" value="something">
-                    </div>
-                  </td>
-                  <td>PRE2209</td>
-                  <td>
-                    <h2 class="table-avatar">
-                      <a href="student-details.html" class="avatar avatar-sm me-2">
-                        <img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-01.jpg" alt="User Image">
-                      </a>
-                      <a href="student-details.html">Aaliyah</a>
-                    </h2>
-                  </td>
-                  <td>10 A</td>
-                  <td>2 Feb 2002</td>
-                  <td>Jeffrey Wong</td>
-                  <td>097 3584 5870</td>
-                  <td>911 Deer Ridge Drive,USA</td>
-                  <td class="text-end">
-                    <div class="actions ">
-                      <a href="javascript:;" class="btn btn-sm bg-success-light me-2 ">
-                        <i class="feather-eye"></i>
-                      </a>
-                      <a href="edit-student.html" class="btn btn-sm bg-danger-light">
-                        <i class="feather-edit"></i>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                @endforeach
-
-              </tbody>
-            </table>
+            {{ $dataTable->table() }}
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script>
-      new DataTable('#datatable');
-  </script>
+  </div>  
+
+
+  
+  {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+
 @endsection
 
