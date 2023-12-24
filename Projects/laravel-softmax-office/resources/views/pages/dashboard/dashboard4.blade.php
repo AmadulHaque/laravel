@@ -121,10 +121,7 @@
     $(document).ready(function(){
       user = {{Auth::guard('admin')->user()->id}} 
     
-      socket = io('http://127.0.0.1:3000', {
-          query: { user_id: user },
-          transports: ['websocket'],
-      });
+      socket = io('http://127.0.0.1:3000');
 
       socket.on("user_connected",(data)=>{
         $('#status'+data).removeClass('is_online_0');
